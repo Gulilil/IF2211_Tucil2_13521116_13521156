@@ -35,7 +35,7 @@ def getDistance(arr1, arr2):
 # Contains calculation of Divide and Conquer Algorithm
 
 # Data Sorting
-def mergeArr(arr1, arr2):
+def mergeArr(arr1, arr2, elmt):
     # Merging two sorted array
     new = [0 for i in range(len(arr1) + len(arr2))]
     idx1 = 0
@@ -51,7 +51,7 @@ def mergeArr(arr1, arr2):
             idx1 += 1
             idx += 1
         else:
-            if (arr1[idx1][0] < arr2[idx2][0]):
+            if (arr1[idx1][elmt] < arr2[idx2][elmt]):
                 new[idx] = arr1[idx1]
                 idx1 += 1
                 idx += 1
@@ -73,13 +73,13 @@ def splitArrTop(arr, n):
         new.append(arr[i])
     return new
 
-def mergeSort(arr):
+def mergeSort(arr, elmt):
     # Will be sorted by the first index of each tuple
     if (len(arr) > 1):
         half = int(len(arr)/2) 
-        arr1 = mergeSort(splitArrBot(arr, half))
-        arr2 = mergeSort(splitArrTop(arr, half))
-        return mergeArr(arr1, arr2)
+        arr1 = mergeSort(splitArrBot(arr, half), elmt)
+        arr2 = mergeSort(splitArrTop(arr, half), elmt)
+        return mergeArr(arr1, arr2, elmt)
     else :
         return arr
 

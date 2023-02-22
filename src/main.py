@@ -1,5 +1,6 @@
 from in_out import *
 from calculate import *
+from dnc import *
 
 # Contains main algorithm
 
@@ -23,11 +24,15 @@ displayTitle("Divide and Conquer Algorithm")
 dncStart = startTime()
 
 # Insert the algorithm here
+dncDistance = getClosestPairDnc(pointsArray, data[0])
 
 dncStop = stopTime()
 
 print("Divide and Conquer Algorithm Execution Time : ", dncStop - dncStart)
 print()
+
+print("The measured distance will be displayed below: ")
+print(dncDistance)
 
 #Calculating (Brute Force Algorithm)
 displayTitle("Brute Force Algorithm")
