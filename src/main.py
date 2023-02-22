@@ -9,7 +9,7 @@ data = validateUserInput()
 print()
 
 # Generating Random Number
-pointsArray = [(1,2,3), (2,2,3), (0,0,2), (0,1,2)]
+pointsArray = []
 displayTitle("Generating Number")
 for i in range(data[0]):
     pointsArray.append(generateNumber(data[1], data[2]))
