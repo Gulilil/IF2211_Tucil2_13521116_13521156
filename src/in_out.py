@@ -52,4 +52,9 @@ def validateUserInput():
             data = askUserInput()
     return data
     
+# Displaying Arr
+def displayArr(arr):
+    for i in range(len(arr)):
+        print(arr[i]);
+
 
