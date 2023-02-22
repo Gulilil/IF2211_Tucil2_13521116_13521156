@@ -26,22 +26,22 @@ def getClosestPairDnc(arr, amount):
         else:
             d = d2
         
-    # listing all points in range of d from line l (mid line of all points)
-    points = []
-    for i in range (amount):
-        if (arr[i][0] >= arr2[0] - d or arr[i][0] <= arr2[0] + d):
-            points.append(arr[i])
+        # listing all points in range of d from line l (mid line of all points)
+        points = []
+        for i in range (amount):
+            if (arr[i][0] >= arr2[0] - d or arr[i][0] <= arr2[0] + d):
+                points.append(arr[i])
 
-    # sort by the ordinat 
+        # sort by the ordinat 
 
-    for i in range (len(points)):
-        for j in range (i+1, len(points)):
-           if (notQualified(points[i], points[j], d)):
-               continue
-           else:
-               d3 = getDistance(points[i], points[j])
-               if (d3 < d):
-                   d = d3
+        for i in range (len(points)):
+            for j in range (i+1, len(points)):
+                if (notQualified(points[i], points[j], d)):
+                    continue
+                else:
+                    d3 = getDistance(points[i], points[j])
+                    if (d3 < d):
+                        d = d3
 
     return d
 
