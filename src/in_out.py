@@ -55,6 +55,6 @@ def validateUserInput():
 # Displaying Arr
 def displayArr(arr):
     for i in range(len(arr)):
-        print(arr[i]);
+        print(arr[i])
 
 

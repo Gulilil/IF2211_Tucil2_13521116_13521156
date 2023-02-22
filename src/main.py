@@ -14,6 +14,7 @@ displayTitle("Generating Number")
 for i in range(data[0]):
     pointsArray.append(generateNumber(data[1], data[2]))
 print("Random points are successfully generated.")
+print(pointsArray[0])
 print()
 
 #Calculating (Divide and Conquer Algorithm)
@@ -33,13 +34,13 @@ displayTitle("Brute Force Algorithm")
 
 bfStart = startTime()
 
-bfSolution = getSolutionBF(pointsArray);
+bfSolution = getSolutionBF(pointsArray)
 
 bfStop = stopTime()
 
-print("The amount of solution: ", len(bfSolution));
+print("The amount of solution: ", len(bfSolution))
 print("The index list of the solution will be displayed below: ")
-displayArr(bfSolution);
+displayArr(bfSolution)
 
 print("The measured distance will be displayed below: ")
 for i in range(len(bfSolution)):

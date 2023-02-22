@@ -8,7 +8,7 @@ import numpy as py
 def generateNumber(length, boundaries):
     # Generate random number (float) and inserting it into a tuple
     # Generated random number will be in range of (-boundaries < x < boundaries)
-    container = [];
+    container = []
     for i in range (length):
         container.append(random.uniform(-boundaries, boundaries))
     return tuple(container)
@@ -21,7 +21,7 @@ def stopTime():
     return time.time()
 
 def convertToSeconds(micros):
-    return micros* (10 ** 6);
+    return micros* (10 ** 6)
 
 # Distance calculation
 def getDistance(arr1, arr2):
@@ -40,25 +40,25 @@ def mergeArr(arr1, arr2):
     new = [0 for i in range(len(arr1) + len(arr2))]
     idx1 = 0
     idx2 = 0
-    idx = 0;
+    idx = 0
     while (idx1 < len(arr1) or idx2 < len(arr2)):
         if (idx1 == len(arr1)):
             new[idx] = arr2[idx2]
-            idx2 += 1;
+            idx2 += 1
             idx += 1
         elif (idx2 == len(arr2)):
             new[idx] = arr1[idx1]
-            idx1 += 1;
-            idx += 1;
+            idx1 += 1
+            idx += 1
         else:
             if (arr1[idx1][0] < arr2[idx2][0]):
                 new[idx] = arr1[idx1]
-                idx1 += 1;
-                idx += 1;
+                idx1 += 1
+                idx += 1
             else :
                 new[idx] = arr2[idx2]
-                idx2 += 1;
-                idx += 1;
+                idx2 += 1
+                idx += 1
     return new
 
 def splitArrBot(arr, n):
@@ -81,7 +81,7 @@ def mergeSort(arr):
         arr2 = mergeSort(splitArrTop(arr, half))
         return mergeArr(arr1, arr2)
     else :
-        return arr;
+        return arr
 
 
 # ===================================================
