@@ -41,7 +41,7 @@ def validateUserInput():
     while (not valid):
         valid = True
         if (data[0] == None):
-            print(" => (Some of) the answer you just inserted cannot be converted into integer or float.")
+            print(" => (Some of) the answers you just inserted cannot be converted into integer or float.")
             valid = False
         elif (data[0] < 2 or data[1] < 3):
             print(" => The minimum amount of points are 2 and the minimum dimensions of Euclidean Plane are 3")
