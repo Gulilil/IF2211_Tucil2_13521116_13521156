@@ -15,7 +15,6 @@ displayTitle("Generating Number")
 for i in range(data[0]):
     pointsArray.append(generateNumber(data[1], data[2]))
 print("Random points are successfully generated.")
-print(pointsArray[0])
 print()
 
 #Calculating (Divide and Conquer Algorithm)
@@ -33,6 +32,7 @@ print()
 
 print("The measured distance will be displayed below: ")
 print(dncDistance)
+print()
 
 #Calculating (Brute Force Algorithm)
 displayTitle("Brute Force Algorithm")
