@@ -14,10 +14,9 @@ def getClosestPairDnc(arr, amount):
     else: 
         arr1 = []
         newAmount2 = amount // 2
-        if (not ((amount // 2) % 2 == 0)):
+        # print("newAmount(1)" + str(newAmount2))
+        if (amount // 2 == 1):
             newAmount2 = (amount // 2) + 1
-
-        newAmount = amount - (amount // 2)
         
         # print("newAmount" + str(newAmount))
         # print("newAmount2" + str(newAmount2))
@@ -38,7 +37,7 @@ def getClosestPairDnc(arr, amount):
         # listing all points in range of d from line l (mid line of all points)
         points = []
         for i in range (newAmount2):
-            if (arr[i][0] >= arr2[i][0] - int(d) or arr[i][0] <= arr2[i][0] + int(d)):
+            if (arr[i][0] >= arr2[i][0] - int(d) + 1 or arr[i][0] <= arr2[i][0] + int(d) + 1):
                 points.append(arr[i])
 
         points = mergeSort(points, 1)
