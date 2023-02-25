@@ -1,6 +1,7 @@
 from in_out import *
 from calculate import *
 from dnc import *
+from visualize import *
 
 # Contains main algorithm
 
@@ -56,3 +57,4 @@ for i in range(len(bfSolution)):
 
 print("Brute Force Algorithm Execution Time : ", bfStop - bfStart)
 
+visualize(pointsArray, pointsArray[0], pointsArray[1], data[0], data[2])
