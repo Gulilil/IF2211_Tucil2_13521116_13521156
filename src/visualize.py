@@ -1,4 +1,3 @@
-import numpy as np 
 import matplotlib.pyplot as plt
 
 def visualize(arr, points1, points2, amount, boundary):
@@ -8,6 +7,7 @@ def visualize(arr, points1, points2, amount, boundary):
     dots = []
     for i in range (boundary + 1):
         dots.append(i)
+
     ax.scatter(dots, dots, dots, c='white', alpha=0)
     for i in range (amount):
         x = arr[i][0]

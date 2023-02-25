@@ -61,4 +61,4 @@ print("Do you want to visualize the dots? (y/n)")
 answer = input(">> ")
 if (answer == "y"):
     displayTitle("Visualizing")
-    visualize(pointsArray, pointsArray[0], pointsArray[1], data[0], data[2])
+    visualize(pointsArray, pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]], data[0], data[2])
