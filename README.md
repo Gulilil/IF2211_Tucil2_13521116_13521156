@@ -46,7 +46,7 @@ Ya ini nanti diisi
 | Name | Student ID |
 |-------|------------|
 | Juan Christopher Santoso | 13521116|
-| Brigita Carolina | 13521156 |
+| Brigita Tri Carolina | 13521156 |
 
 
 
