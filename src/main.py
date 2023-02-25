@@ -57,4 +57,8 @@ for i in range(len(bfSolution)):
 
 print("Brute Force Algorithm Execution Time : ", bfStop - bfStart)
 
-visualize(pointsArray, pointsArray[0], pointsArray[1], data[0], data[2])
+print("Do you want to visualize the dots? (y/n)")
+answer = input(">> ")
+if (answer == "y"):
+    displayTitle("Visualizing")
+    visualize(pointsArray, pointsArray[0], pointsArray[1], data[0], data[2])

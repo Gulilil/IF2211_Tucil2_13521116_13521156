@@ -13,6 +13,10 @@ def visualize(arr, points1, points2, amount, boundary):
         x = arr[i][0]
         y = arr[i][1]
         z = arr[i][2]
-        ax.scatter(x, y, z, c='black')
+        if ((x == points1[0] and y == points1[1] and z == points1[2]) or
+            (x == points2[0] and y == points2[1] and z == points2[2])):
+            ax.scatter(x, y, z, c='green')
+        else:
+            ax.scatter(x, y, z, c='black')
 
     plt.show()
