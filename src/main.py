@@ -57,8 +57,10 @@ for i in range(len(bfSolution)):
 
 print("Brute Force Algorithm Execution Time : ", bfStop - bfStart)
 
-print("Do you want to visualize the dots? (y/n)")
-answer = input(">> ")
-if (answer == "y"):
-    displayTitle("Visualizing")
-    visualize(pointsArray, pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]], data[0], data[2])
+#visualizing if the dots are in 3D
+if (data[1] == 3): 
+    print("Do you want to visualize the dots? (y/n)")
+    answer = input(">> ")
+    if (answer == "y"):
+        displayTitle("Visualizing")
+        visualize(pointsArray, pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]], data[0], data[2])
