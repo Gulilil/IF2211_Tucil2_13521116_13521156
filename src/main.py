@@ -23,7 +23,7 @@ displayTitle("Divide and Conquer Algorithm")
 dncStart = startTime()
 
 # Insert the algorithm here
-dncDistance = getClosestPairDnc(pointsArray, data[0])
+dncDistance = getSolutionDnC(pointsArray, getClosestPairDnc(pointsArray, data[0]), data[0])
 
 dncStop = stopTime()
 
