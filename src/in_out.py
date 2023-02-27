@@ -30,7 +30,7 @@ def askUserInput():
     try:
         amount = int(amount)
         dimension = int(dimension)
-        boundaries = float(boundaries)
+        boundaries = int(boundaries)
         return (amount, dimension, boundaries)
     except:
         return (None, None, None)
