@@ -48,16 +48,16 @@ Ya ini nanti diisi
 
 ## **Folders and Files Description**
 ```bash
-|   README.md
+│   README.md
 ├───doc
-     |   Tucil_13521116_13521156
+     │   Tucil_13521116_13521156
 └───src
-     |   main.py
-     |   dnc.py
-     |   bf.py
-     |   calculate.py
-     |   in_out.py
-     |   visualize.py
+     │   main.py
+     │   dnc.py
+     │   bf.py
+     │   calculate.py
+     │   in_out.py
+     │   visualize.py
 ```
 
 ## **Author**
