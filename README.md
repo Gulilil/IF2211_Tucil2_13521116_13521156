@@ -49,9 +49,9 @@ Ya ini nanti diisi
 ## **Folders and Files Description**
 ```bash
 |   README.md
-|   doc
+├───doc
      |   Tucil_13521116_13521156
-|   src
+└───src
      |   main.py
      |   dnc.py
      |   bf.py
