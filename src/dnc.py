@@ -1,5 +1,8 @@
 from calculate import *
 
+
+# ===================================================
+# Calculation for Divide and Conquer Algorithm
 def notQualified(point1, point2, d):
     for i in range (len(point1)):
         if (abs(point1[i] - point2[i]) > d):

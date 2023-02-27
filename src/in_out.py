@@ -24,10 +24,11 @@ def displayTitle(title):
 # User Input
 def askUserInput():
     # Return tuple of three value, amount of points, dimension, and boundaries
-    amount = input("Amount of points you want to insert: ")
-    dimension = input("Dimension of Euclidean Space you want to use: ")
-    boundaries = input("Boundaries of Euclidean Space you want to use: ")
+
     try:
+        amount = input("Amount of points you want to insert: ")
+        dimension = input("Dimension of Euclidean Space you want to use: ")
+        boundaries = input("Boundaries of Euclidean Space you want to use: ")
         amount = int(amount)
         dimension = int(dimension)
         boundaries = int(boundaries)
@@ -43,8 +44,8 @@ def validateUserInput():
         if (data[0] == None):
             print(" => (Some of) the answers you just inserted cannot be converted into integer or float.")
             valid = False
-        elif (data[0] < 2 or data[1] < 3):
-            print(" => The minimum amount of points are 2 and the minimum dimensions of Euclidean Plane are 3")
+        elif (data[0] < 2 or data[1] < 1):
+            print(" => The minimum amount of points are 2 and the minimum dimensions of Euclidean Plane are 2")
             valid = False
 
         if (not valid):

@@ -1,5 +1,6 @@
 from in_out import *
 from calculate import *
+from bf import *
 from dnc import *
 from visualize import *
 
@@ -11,7 +12,7 @@ data = validateUserInput()
 print()
 
 # Generating Random Number
-pointsArray = []
+pointsArray = [(10,20,30),(10,22,30), (5,18,20), (5,20,20)]
 displayTitle("Generating Number")
 for i in range(data[0]):
     pointsArray.append(generateNumber(data[1], data[2]))
@@ -45,7 +46,7 @@ bfSolution = getSolutionBF(pointsArray)
 bfStop = stopTime()
 
 print("The amount of solution: ", len(bfSolution))
-print("The index list of the solution will be displayed below: ")
+print("The index of the closest pair solution will be displayed below: ")
 displayArr(bfSolution)
 
 print("The measured distance will be displayed below: ")
@@ -58,9 +59,14 @@ for i in range(len(bfSolution)):
 print("Brute Force Algorithm Execution Time : ", bfStop - bfStart)
 
 #visualizing if the dots are in 3D
-if (data[1] == 3): 
+displayTitle("Visualizing")
+print(pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]])
+if (data[1] == 3 or data[1] == 2): 
     print("Do you want to visualize the dots? (y/n)")
     answer = input(">> ")
     if (answer == "y"):
-        displayTitle("Visualizing")
-        visualize(pointsArray, pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]], data[0], data[2])
+        visualize(pointsArray, pointsArray[bfSolution[0][0]], pointsArray[bfSolution[0][1]], data[0], data[1], data[2])
+    else :
+        print("The program has been stopped.")
+else :
+    print("It cannot be visualized.")
