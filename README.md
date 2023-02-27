@@ -13,7 +13,7 @@
 * [Author](#author)
 
 ## **Program Description**
-This program uses python programming language and is a **command line interface (CFI)** based program. The main program is to find the closest pair of dots in N-Dimension plane. This program is being made with Divide and Conquer algorithm with the Brute Force algorithm as its comparison. This program also uses the python **matplotlib.pyplot** library to visualize the closest pair of dots found in 3 dimension plane.   
+This program uses python programming language and is a **command line interface (CLI)** based program. The main program is to find the closest pair of dots in N-Dimension plane. This program is being made with Divide and Conquer algorithm with the Brute Force algorithm as its comparison. This program also uses the python **matplotlib.pyplot** library to visualize the closest pair of dots found in 3 dimension plane.   
 
 ## **Required Program**
 To compile this program, you will need to install **Python** on the device you are using. You may click the [link here](#https://www.python.org/downloads/) to install it.
