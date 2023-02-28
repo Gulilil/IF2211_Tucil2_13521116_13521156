@@ -36,7 +36,10 @@ py main.py
 ```
 
 ## **Implementation Screenshots**
-Ya ini nanti diisi
+![input1](https://user-images.githubusercontent.com/88926116/221868107-4101bec1-1af8-4047-a205-45ac9a35ea11.png)
+![output1](https://user-images.githubusercontent.com/88926116/221868147-a31e72e2-8479-460e-8cf9-0221ff489744.png)
+![Graphic1](https://user-images.githubusercontent.com/88926116/221868166-e3c0d640-55e0-40fa-bd2b-52c37e3e5ba6.png)
+
 
 ## **Progress Report**
 
