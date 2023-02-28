@@ -55,6 +55,10 @@ print("The index of the closest pair solution will be displayed below: ")
 displayArr(bfSolution)
 print()
 
+print("The points that are considered as the closest pair(s) will be displayed below: ")
+displayPointByIndex(pointsArray, bfSolution)
+print()
+
 print("The measured distance will be displayed below: ")
 for i in range(len(bfSolution)):
     print((i+1), end=". ")

@@ -26,7 +26,7 @@ def getSolutionDnC(arr, amount):
     if (amount == 2):
         return [(arr[0], arr[1])]
     elif (amount == 3):
-        return getClosestPairof3(arr[0], arr[1], arr[2]);
+        return getClosestPairof3(arr[0], arr[1], arr[2])
     else :
         # split array into 2
         newAmount = amount // 2

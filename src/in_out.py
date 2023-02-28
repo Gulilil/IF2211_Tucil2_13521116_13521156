@@ -58,4 +58,11 @@ def displayArr(arr):
     for i in range(len(arr)):
         print(arr[i])
 
+def displayPointByIndex(arrPoint, arrIndex):
+    for i in range(len(arrIndex)):
+        print("(", end="")
+        print(arrPoint[arrIndex[i][0]], end="")
+        print(",", end="")
+        print(arrPoint[arrIndex[i][1]], end="")
+        print(")")
 
