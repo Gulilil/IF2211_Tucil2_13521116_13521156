@@ -17,7 +17,8 @@ This program uses python programming language and is a **command line interface 
 ## **Required Program**
 To compile this program, you will need to install **Python** on the device you are using. You may click the [link here](https://www.python.org/downloads/) to install it.
 After installing **Python** you will need to install the library.
-Use this command to install matplotlyb.
+Since this program is using the matplotlib library, you might need to install it if you have not installed it before.
+Here are the commands you can use to install the matplotlib library.
 ```
 python -m pip install -U pip
 ```
