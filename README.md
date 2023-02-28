@@ -6,7 +6,6 @@
 * [Program Description](#program-description)
 * [Required Program](#required-program)
 * [How to Run The Program](#how-to-run-the-program)
-* [How to Compile The Program](#how-to-compile-the-program)
 * [Implementation Screenshots](#implementation-screenshots)
 * [Progress Report](#progress-report)
 * [Folders and Files Description](#folders-and-files-description)
@@ -20,16 +19,21 @@ To compile this program, you will need to install **Python** on the device you a
 
 ## **How to Run The Program**
 1. Clone this repo using this command
+
 ```
 git clone https://github.com/Gulilil/Tucil2_13521116_13521156.git
 ```
-2. Use this command in src folder
+
+2. Change the current directory into the src folder
+```
+cd src
+```
+
+3. Launch the main program
+
 ```
 py main.py
 ```
-
-## **How to Compile The Program**
-Ya ini nanti diisi
 
 ## **Implementation Screenshots**
 Ya ini nanti diisi
@@ -48,16 +52,17 @@ Ya ini nanti diisi
 
 ## **Folders and Files Description**
 ```bash
-│   README.md
-├───doc
-        Tucil_13521116_13521156.pdf
-└───src
-        main.py
-        dnc.py
-        bf.py
-        calculate.py
-        in_out.py
-        visualize.py
+├── assets                              
+├── doc
+    └── Tucil_13521116_13521156.pdf
+├── src
+    ├── main.py
+    ├── dnc.py
+    ├── bf.py
+    ├── calculate.py
+    ├── in_out.py
+    └── visualize.py
+└── README.md
 ```
 
 ## **Author**
