@@ -70,7 +70,7 @@ print()
 
 #visualizing if the dots are in 3D
 displayTitle("Visualizing")
-if (data[1] == 3): 
+if (data[1] == 3 or data[1] == 2): 
     print("Do you want to visualize the dots? (y/n)")
     answer = input(">> ")
     if (answer == "y"):

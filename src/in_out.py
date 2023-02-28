@@ -1,9 +1,6 @@
 
 # Contain input and output algorithm
 
-# Display Ascii Art
-# nanti aja ini kalo sempet
-
 # Title Printing
 def displayTitle(title):
     # Displaying title
