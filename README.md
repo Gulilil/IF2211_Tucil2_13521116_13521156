@@ -36,11 +36,9 @@ py main.py
 ```
 
 ## **Implementation Screenshots**
-
-
-<img src="https://user-images.githubusercontent.com/88926116/221870784-ba4afa6f-18d4-4eda-884d-df5eb5c027a4.png" width="400">
-<img src="https://user-images.githubusercontent.com/88926116/221868147-a31e72e2-8479-460e-8cf9-0221ff489744.png" width="500">
-<img src="https://user-images.githubusercontent.com/88926116/221868166-e3c0d640-55e0-40fa-bd2b-52c37e3e5ba6.png" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/88926116/221939551-6c997e41-a376-4b5f-889e-48e318b6f094.jpg" width="400">
+<img src="https://user-images.githubusercontent.com/88926116/221939725-33c2e109-ca28-43cc-8c63-703b5edc9a37.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/88926116/221939832-5e954153-7b04-477b-b505-a9ef02cff43e.jpg" width="300" height="300">
 
 ## **Progress Report**
 
