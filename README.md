@@ -38,7 +38,7 @@ py main.py
 ## **Implementation Screenshots**
 <img src="https://user-images.githubusercontent.com/88926116/221939551-6c997e41-a376-4b5f-889e-48e318b6f094.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/88926116/221939725-33c2e109-ca28-43cc-8c63-703b5edc9a37.jpg" width="500">
-<img src="https://user-images.githubusercontent.com/88926116/221939832-5e954153-7b04-477b-b505-a9ef02cff43e.jpg" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/88926116/221939832-5e954153-7b04-477b-b505-a9ef02cff43e.jpg">
 
 ## **Progress Report**
 
