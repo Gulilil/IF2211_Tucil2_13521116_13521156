@@ -39,7 +39,7 @@ py main.py
 
 
 <img src="https://user-images.githubusercontent.com/88926116/221870784-ba4afa6f-18d4-4eda-884d-df5eb5c027a4.png" width="400">
-<img src="https://user-images.githubusercontent.com/88926116/221868147-a31e72e2-8479-460e-8cf9-0221ff489744.png" width="400" height="250">
+<img src="https://user-images.githubusercontent.com/88926116/221868147-a31e72e2-8479-460e-8cf9-0221ff489744.png" width="400">
 <img src="https://user-images.githubusercontent.com/88926116/221868166-e3c0d640-55e0-40fa-bd2b-52c37e3e5ba6.png" width="250" height="250">
 
 ## **Progress Report**
