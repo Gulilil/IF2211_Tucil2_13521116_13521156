@@ -9,56 +9,95 @@ def notQualified(point1, point2, d):
             return True
     return False
 
-def getClosestPairDnc(arr, amount):
-    arr = mergeSort(arr, 0)
-    # arrSolution = []
+def getClosestPairof3(p1, p2, p3):
+    d1 = getDistance(p1, p2)
+    d2 = getDistance(p2, p3)
+    d3 = getDistance(p3, p1)
+    
+    if (min(d1,d2,d3) == d1):
+        return [(p1,p2)]
+    elif (min(d1,d2,d3) == d2):
+        return [(p2,p3)]
+    else :
+        return [(p1,p3)]
+
+def getSolutionDnC(arr, amount):
+    arr = mergeSort(arr,0)
     if (amount == 2):
-        d = getDistance(arr[0], arr[1])
-    else: 
-        arr1 = []
+        return [(arr[0], arr[1])]
+    elif (amount == 3):
+        return getClosestPairof3(arr[0], arr[1], arr[2]);
+    else :
+        # split array into 2
         newAmount = amount // 2
-        # print("newAmount(1)" + str(newAmount2))
-        if (amount // 2 == 1):
-            newAmount = (amount // 2) + 1
+        arr1 = splitArrBot(arr, newAmount)
+        arr2 = splitArrTop(arr, newAmount)
+
+        # get closest points of left side  and right side
+        ptuple1 = getSolutionDnC(arr1, newAmount)
+        ptuple2 = getSolutionDnC(arr2, newAmount)
+
+        if (getDistance(ptuple1[0][0], ptuple1[0][1]) < getDistance(ptuple2[0][0], ptuple2[0][1])):
+            ptuple2.clear()
+        elif (getDistance(ptuple1[0][0], ptuple1[0][1]) == getDistance(ptuple2[0][0], ptuple2[0][1])):
+            ptuple1.append(ptuple2[0])
+            ptuple2.clear()
+        else :
+            ptuple1.clear()
+            for i in range(len(ptuple2)):
+                ptuple1.append(ptuple2[i])
+            ptuple2.clear()
         
-        # print("newAmount" + str(newAmount))
-        # print("newAmount2" + str(newAmount2))
+        #shortest points will be stored in ptuple1
+        return thirdCase(arr, ptuple1, amount)
 
-        for i in range (newAmount):
-            arr1.append(arr[i])  
-        arr2 = []
-        for i in range (amount // 2, amount):
-            arr2.append(arr[i])
 
-        d1 = getClosestPairDnc(arr1, newAmount)
-        d2 = getClosestPairDnc(arr2, newAmount)
-        if (d1 < d2):
-            d = d1
-        else:
-            d = d2
-        
-
-    return d
-
-def getSolutionDnC(arr, d, amount):
-        # listing all points in range of d from line l (mid line of all points)
+def thirdCase(arr, tupleP, amount):
+    # calculate minimal distance
+    d = getDistance(tupleP[0][0], tupleP[0][1])
+    # default answer will be the points from tupleP
+    # will be changed if there is any other shorter pair
+    result = []
     if (amount == 2):
-        return d        
-    else:
+        return tupleP
+    else :
         points = []
-        newAmount2 = amount // 2
-        for i in range (amount):
-            if (arr[i][0] >= arr[newAmount2][0] - int(d) + 1 or arr[i][0] <= arr[newAmount2][0] + int(d) + 1):
+        newAmount = amount // 2
+
+        # Insert points within d range
+        for i in range(amount):
+            if (arr[i][0] >= arr[newAmount][0] - int(d) + 1 
+                or arr[newAmount][0] + int(d) + 1):
                 points.append(arr[i])
-
+        
+        # Sort based on the second element (y-axis)
         points = mergeSort(points, 1)
+        for i in range(len(points)):
+            for j in range(i+1, len(points)):
+                # case the point is outside the d range
 
-        for i in range (len(points)):
-            for j in range (i+1, len(points)):
                 if (notQualified(points[i], points[j], d)):
                     continue
-                else:
-                    d3 = getDistance(points[i], points[j])
-                    if (d3 < d):
-                        d = d3
-    return d
+                else :
+                    if (getDistance(points[i], points[j]) < d):
+                        result.clear()
+                        result.append((points[i], points[j]))
+                        d = getDistance(points[i], points[j])
+                    elif (getDistance (points[i], points[j]) == d):
+                        result.append((points[i], points[j]))
+    return result
+
+
+# Ini hanya untuk ngetest aja
+# array = [(1,2,3),
+#          (-18,4,5),
+#          (2,1,3),
+#          (-18,5,4),
+#          (6,7,8),
+#          (8,5,6),
+#          (-20, 4, 7),
+#          (-6, -8, 5),
+#          (-10, 5, -9),
+#          (-3, -2, -8)
+#         ]
+
