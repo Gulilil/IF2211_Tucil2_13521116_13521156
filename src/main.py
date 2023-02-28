@@ -3,6 +3,7 @@ from calculate import *
 from bf import *
 from dnc import *
 from visualize import *
+from globals import *
 
 # Contains main algorithm
 # Ask User Input
@@ -19,13 +20,13 @@ print()
 
 #Calculating (Divide and Conquer Algorithm)
 displayTitle("Divide and Conquer Algorithm")
-
 dncStart = startTime()
 
 dncSolution = getSolutionDnC(pointsArray, data[0])
 
 dncStop = stopTime()
 
+print(getCountsDnC())
 print("Divide and Conquer Algorithm Execution Time : ", dncStop - dncStart)
 
 print("The amount of solution: ", len(dncSolution))
@@ -48,6 +49,7 @@ bfSolution = getSolutionBF(pointsArray)
 
 bfStop = stopTime()
 
+print(getCountsBF())
 print("Brute Force Algorithm Execution Time : ", bfStop - bfStart)
 
 print("The amount of solution: ", len(bfSolution))

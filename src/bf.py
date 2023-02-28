@@ -1,4 +1,5 @@
 from calculate import *
+from globals import *
 
 
 # ===================================================
@@ -13,11 +14,15 @@ def getSolutionBF(arr):
                 minTuple = (i, j)
                 arrSolution.append(minTuple)
             else :
-                if (getDistance(arr[i], arr[j]) < getDistance(arr[minTuple[0]], arr[minTuple[1]])):
+                d1 = getDistance(arr[i], arr[j])
+                d2 = getDistance(arr[minTuple[0]], arr[minTuple[1]])
+                addCountsBF(2)
+                if ( d1 < d2):
                     arrSolution.clear()
                     minTuple = (i, j)
                     arrSolution.append(minTuple)
-                elif (getDistance(arr[i], arr[j]) == getDistance(arr[minTuple[0]], arr[minTuple[1]])):
+                elif (d1 == d2):
+                    
                     minTuple = (i,j)
                     arrSolution.append(minTuple)
     return arrSolution

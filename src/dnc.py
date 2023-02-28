@@ -1,4 +1,5 @@
 from calculate import *
+from globals import *
 
 
 # ===================================================
@@ -26,6 +27,7 @@ def getSolutionDnC(arr, amount):
     if (amount == 2):
         return [(arr[0], arr[1])]
     elif (amount == 3):
+        addCountsDnC(3)
         return getClosestPairof3(arr[0], arr[1], arr[2])
     else :
         # split array into 2
@@ -37,9 +39,12 @@ def getSolutionDnC(arr, amount):
         ptuple1 = getSolutionDnC(arr1, newAmount)
         ptuple2 = getSolutionDnC(arr2, newAmount)
 
-        if (getDistance(ptuple1[0][0], ptuple1[0][1]) < getDistance(ptuple2[0][0], ptuple2[0][1])):
+        d1 = getDistance(ptuple1[0][0], ptuple1[0][1])
+        d2 = getDistance(ptuple2[0][0], ptuple2[0][1])
+        addCountsDnC(2)
+        if ( d1 < d2 ):
             ptuple2.clear()
-        elif (getDistance(ptuple1[0][0], ptuple1[0][1]) == getDistance(ptuple2[0][0], ptuple2[0][1])):
+        elif (d1 == d2):
             ptuple1.append(ptuple2[0])
             ptuple2.clear()
         else :
@@ -55,6 +60,7 @@ def getSolutionDnC(arr, amount):
 def thirdCase(arr, tupleP, amount):
     # calculate minimal distance
     d = getDistance(tupleP[0][0], tupleP[0][1])
+    addCountsDnC(1)
     # default answer will be the points from tupleP
     # will be changed if there is any other shorter pair
     result = []
@@ -79,11 +85,14 @@ def thirdCase(arr, tupleP, amount):
                 if (notQualified(points[i], points[j], d)):
                     continue
                 else :
-                    if (getDistance(points[i], points[j]) < d):
+                    d1 = getDistance(points[i], points[j])
+                    addCountsDnC(1)
+                    if ( d1 < d):
                         result.clear()
                         result.append((points[i], points[j]))
                         d = getDistance(points[i], points[j])
-                    elif (getDistance (points[i], points[j]) == d):
+                        addCountsDnC(1)
+                    elif (d1 == d):
                         result.append((points[i], points[j]))
     return result
 
