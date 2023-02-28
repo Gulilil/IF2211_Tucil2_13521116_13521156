@@ -1,5 +1,5 @@
 from calculate import *
-from globals import *
+from globalCounts import *
 
 
 # ===================================================
@@ -97,16 +97,4 @@ def thirdCase(arr, tupleP, amount):
     return result
 
 
-# Ini hanya untuk ngetest aja
-# array = [(1,2,3),
-#          (-18,4,5),
-#          (2,1,3),
-#          (-18,5,4),
-#          (6,7,8),
-#          (8,5,6),
-#          (-20, 4, 7),
-#          (-6, -8, 5),
-#          (-10, 5, -9),
-#          (-3, -2, -8)
-#         ]
 

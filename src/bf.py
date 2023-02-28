@@ -1,5 +1,5 @@
 from calculate import *
-from globals import *
+from globalCounts import *
 
 
 # ===================================================
